@@ -1,0 +1,25 @@
+{
+  "name": "task-stash-server",
+  "version": "1.0.50",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts",
+    "start-db": "bun run database.ts",
+    "migrate": "prisma migrate dev",
+    "migrate.init": "prisma migrate dev --name init"
+  },
+  "dependencies": {
+    "@msgpack/msgpack": "3.0.0-beta2",
+    "@prisma/client": "5.10.2",
+    "elysia": "latest",
+    "elysia-msgpack": "^0.1.0",
+    "nanoid": "^5.0.6",
+    "openpgp": "^5.11.1",
+    "secure-remote-password": "^0.3.1"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "prisma": "^5.10.2"
+  },
+  "module": "src/index.js"
+}
